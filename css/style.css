@@ -1,0 +1,654 @@
+:root {
+    --primary: #fff;
+    --secondary: #EF5050;
+    --subtext: #FF0C0C;
+    --background_color: #0c0c0c; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Caveat', sans-serif;
+    color: var(--primary);
+    background: var(--background_color);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6%;
+    background-color: var(--background_color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar.scroll {
+    background-color: rgba(12, 12, 12, 0.9);
+}
+
+.navbar .navbar-logo img {
+    width: 5.5rem;
+}
+
+.navbar .navbar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .navbar-logo a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 0 1.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--secondary);
+}
+
+.navbar #hamburger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 6%;
+    margin-top: 10rem;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.hero .content h1 {
+    font-size: 4.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero .content p{
+    font-size: 2.5rem;
+    padding-bottom: 5rem;
+    font-weight: 300;
+}
+
+.hero .content .tablet-view {
+    display: none;
+}
+
+.hero .content a,
+.products .product-cube-briquettes .content a {
+    color: var(--primary);
+    font-size: 2.5rem;
+    background-color: var(--secondary);
+    padding: 1.2rem 6rem;
+    border-radius: 0.5rem;
+}
+
+.hero .content a:hover,
+.products .product-cube-briquettes .content a:hover,
+.order .content form button:hover {
+    color: var(--secondary);
+    background-color: var(--background_color);
+    border: 3px solid var(--secondary);
+    font-weight: 500;
+}
+
+.hero img {
+    width: 45%;
+}
+
+/* About Us Section */
+.about-us,
+.products,
+.why-choose-us,
+.order {
+    padding: 5rem 6% 1.5rem;
+}
+
+.about-us .judul,
+.products .judul,
+.why-choose-us .judul,
+.order .judul {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-us .judul h2,
+.products .judul h2,
+.why-choose-us .judul h2,
+.order .judul h2{
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.about-us .judul p,
+.products .judul p,
+.why-choose-us .judul p,
+.order .judul p {
+    font-size: 2.2rem;
+    font-weight: 300;
+    padding: 0 10%;
+}
+
+.about-us .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us .content .image,
+.products .product-cube-briquettes .image {
+    width: 50rem;
+}
+
+.about-us .content .image img,
+.products .product-cube-briquettes .image img {
+    width: 100%;
+}
+
+.about-us .content .keterangan {
+    width: 50rem;
+}
+
+.about-us .content .keterangan p{
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* Products */
+.products .product-cube-briquettes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.products .product-cube-briquettes .image {
+    text-align: center;
+}
+
+.products .product-cube-briquettes .image img {
+    width: 90%;
+}
+
+.products .product-cube-briquettes .content {
+    width: 50%;
+}
+
+.products .product-cube-briquettes .content .keterangan{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.products .product-cube-briquettes .content .keterangan h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.products .product-cube-briquettes .content .keterangan p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.products .product-cube-briquettes .content .keterangan p.note {
+    color: var(--subtext);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.products .product-cube-briquettes .content .price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.products .product-cube-briquettes .content .price .icon .weight{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.products .product-cube-briquettes .content .price .icon .weight img {
+    width: 5rem;
+}
+
+.products .product-cube-briquettes .content .price .icon .weight h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.products .product-cube-briquettes .content .price .icon p {
+    font-size: 3rem;
+    padding-top: 0.5rem;
+}
+
+/* Why Choose Us */
+.why-choose-us .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.why-choose-us .content .card {
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background-color: #303030;
+}
+
+.why-choose-us .content .card img{
+    width: 30%;
+}
+
+.why-choose-us .content .card .keterangan h2 {
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.why-choose-us .content .card .keterangan p {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Order */
+.order .judul p {
+    padding: 0;
+}
+
+.order .content form {
+    padding: 0 5rem;
+}
+
+.order .content form .field {
+    margin-bottom: 2rem;
+}
+
+.order .content form .field h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.order .content form .field input,
+.order .content form .field select {
+    width: 100%;
+    height: 4rem;
+    padding: 1.2rem;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.order .content form .note h3{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--subtext);
+}
+
+.order .content form .note p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--subtext);
+    margin-bottom: 3rem;
+}
+
+.order .content form button {
+    width: 100%;
+    height: 6rem;
+    font-size: 2rem;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--primary);
+    width: 100%;
+    color: white;
+    margin-top: 5rem;
+    padding: 2rem 7% ;
+    text-align: left;
+    background-color: var(--textcolor);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container .description h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer .container .description .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+footer .container .description .logo img {
+    width: 6rem;
+}
+
+footer .container .description .logo h2 {
+    padding-left: 2rem;
+}
+
+footer .container .description p {
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+footer .container .description .copyright {
+    padding-top: 2rem;
+}
+
+footer .container .description a.menu{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+footer .container .description a.menu:hover,
+footer .container .description .socials a:hover {
+    color: var(--secondary);
+}
+
+footer .container .description .socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer .container .description .socials .feather {
+    width: 2rem;
+}
+
+footer .container .description .socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+footer .container .description .socials a p,
+.contact .content .address .socials a p {
+    padding-left: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1669px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1616px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 1350px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 1270px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar .navbar-logo a {
+        font-size: 4rem;
+    }
+
+    .navbar #hamburger-menu {
+        color: white;
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--background_color);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+        overflow-x: hidden;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 3.5rem;
+    } 
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    .hero .desktop-view {
+        display: none;
+    }
+
+    .hero .content .tablet-view {
+        display: inline-block;
+    }
+
+    .hero .content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .content img {
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+
+    .hero .content a {
+        width: 80%;
+        padding: 1.5rem 0;
+        height: 7rem;
+    }
+
+    .hero .content br {
+        display: none;
+    }
+
+    .about-us .judul p,
+    .products .judul p,
+    .why-choose-us .judul p,
+    .order .judul p {
+        padding: 0 5%;
+    }
+
+    .about-us .content,
+    .products .product-cube-briquettes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .about-us .content .image,
+    .about-us .content .keterangan,
+    .products .product-cube-briquettes .image,
+    .products .product-cube-briquettes .content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-us .content .keterangan,
+    .products .product-cube-briquettes .content .keterangan {
+        text-align: left;
+    }
+
+    .about-us .content .image img,
+    .products .product-cube-briquettes .image img {
+        width: 70%;
+    }
+
+    .products .product-cube-briquettes .content a {
+        display: inline-block;
+        width: 100%;
+        height: 8rem;
+        font-size: 3rem;
+        padding: 2rem;
+    }
+
+    .order .content form {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1090px) {
+    footer .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 5rem;
+    }
+
+    footer .container .description.menu {
+        padding-left: 60%;
+    }
+}
+
+@media (max-width: 805px) {
+    footer .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    footer .container .description h2 {
+        font-size: 4rem;
+    }
+
+    footer .container .description p,
+    footer .container .description a.menu,
+    footer .container .description .copyright {
+        font-size: 2.5rem;
+    }
+
+    footer .container .description .logo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .container {
+        justify-items: center;
+        text-align: center;
+    }
+
+    footer .container .socials {
+        display: inline-block;
+        text-align: center;
+    }
+
+    footer .container .description.menu {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .why-choose-us .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 590px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 560px) {
+    html {
+        font-size: 50%;
+    }
+}
